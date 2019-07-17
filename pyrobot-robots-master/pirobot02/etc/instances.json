@@ -1,0 +1,16 @@
+{
+"tracker":        {"_COMP":"tracker_sensor::tr_waveshare",
+                 "_INTERFACES":[],
+                 "_PUB":["line"],
+                 "_PUB_EVENTS":[]
+                },
+
+"camara":      {"_COMP":"camera::picam",
+                    "_INTERFACES":["camera"],
+                    "socket_port":11000,
+                    "idcam":0,
+                    "width":320,
+                    "height":200,
+                    "framerate":24
+               }
+}

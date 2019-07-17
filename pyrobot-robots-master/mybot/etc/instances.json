@@ -1,0 +1,40 @@
+{
+  "temperatura1":{"_COMP":"temp_sensor",
+                  "_PUB":"temp",
+                  "pintriger":10,
+                  "pinecho":11
+                 },
+
+  "temperatura2":{"_COMP":"temp_sensor",
+                  "_INTERFACES":["temp_interface"],
+                  "_PUB":"temp",
+                  "pintriger":12,
+                  "pinecho":13
+                 },
+
+  "MYgps"         :{"_COMP":"gps",
+                  "_INTERFACES":"gps_drive",
+                  "_PUB":["X","Y","Z"],
+                  "_SUB":["temp=temperatura1/temp",
+                           "mi=BaseM/mi",
+                           "md=BaseM/md"
+                          ],
+                  "_PUB_EVENTS":"gps",
+                  "_SUB_EVENTS":"base_event=BaseM/basemotion"
+                },
+"BaseM":        {"_COMP":"base::base",
+                 "_INTERFACES":["basemotion_interface"],
+                 "_PUB":["mi","md"],
+                 "_PUB_EVENTS":["basemotion"],
+                 "_REQ":"gps=MYgps/gps_drive"
+                },
+
+  "camara_frontal":{"_COMP":"camera::usbcam",
+                    "_INTERFACES":["camera"],
+                    "socket_port":11000,
+                    "idcam":0,
+                    "width":320,
+                    "height":200,
+                    "framerate":24
+                   }
+}

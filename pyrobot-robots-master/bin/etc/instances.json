@@ -1,0 +1,24 @@
+{
+  "bigbrother":{"_COMP":"bigbrother::BigBrother",
+                "_INTERFACES":["BB_interface"],
+                "sys":true,
+                "ethernet":"wlp3s0",
+                "port":9090,
+                "broadcast_port":9999,
+                "mode":"public",
+                "KEY":"user:pass",
+                "frec":0.02
+              },
+ "node"      :{"_COMP":"node::Node",
+               "_INTERFACES":["Node_interface"],
+               "ethernet":"wlp3s0",
+               "sys":true,
+               "port":5050,
+               "broadcast_port" :9999,
+               "public_sync":false,
+               "MQTT_port"  :1883,
+               "mode":"public",
+               "KEY":"user:pass",
+               "frec":0.02
+              }
+}

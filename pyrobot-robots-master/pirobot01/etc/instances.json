@@ -1,0 +1,16 @@
+{
+"base":        {"_COMP":"dfmotors::MotorHat",
+                 "_INTERFACES":["basemotion_interface"],
+                 "_PUB":["mi","md"],
+                 "_PUB_EVENTS":["basemotion"]
+                },
+
+"camara":      {"_COMP":"camera::picam",
+                    "_INTERFACES":["picam_interface"],
+                    "socket_port":11000,
+                    "idcam":0,
+                    "width":320,
+                    "height":200,
+                    "framerate":24
+               }
+}

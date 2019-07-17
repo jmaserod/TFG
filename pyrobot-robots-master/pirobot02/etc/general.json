@@ -1,0 +1,10 @@
+{
+      "ethernet":"eth0",
+      "sys":false,
+      "port":6060,
+      "broadcast_port":9999,
+      "MQTT_port"  :1883,
+      "mode":"public",
+      "KEY":"user:pass",
+      "frec":0.02
+}
